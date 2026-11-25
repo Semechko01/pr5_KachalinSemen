@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">pr5_Kachalin</string>
+    <string name="text1">ИТ-специальности</string>
+    <string name="it">ИТ-специальности</string>
+    <string name="text2">Сменить тему</string>
+    <string name="text3">Позвонить в приемную комиссию</string>
+    <string name="text5">Назад</string>
+    <string name="text6">Детали специальности</string>
 </resources>

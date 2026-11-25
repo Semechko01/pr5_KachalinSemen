@@ -26,8 +26,10 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.example.pr5_kachalin.R
 import com.example.pr5_kachalin.data.Specialty
 import com.example.pr5_kachalin.data.SpecialtyRepository
 
@@ -44,12 +46,12 @@ fun ListScreen(navController: NavHostController) {
         Scaffold(
             topBar = {
                 TopAppBar(
-                    title = { Text("ИТ-специальности") },
+                    title = { Text(stringResource(R.string.it)) },
                     actions = {
                         IconButton(onClick = { isDark = !isDark }) {
                             Icon(
                                 imageVector = if (isDark) Icons.Default.DarkMode else Icons.Default.LightMode,
-                                contentDescription = "Сменить тему"
+                                contentDescription = stringResource(R.string.text2)
                             )
                         }
                     }

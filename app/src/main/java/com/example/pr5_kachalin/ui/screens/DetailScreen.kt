@@ -21,9 +21,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalContext
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import androidx.navigation.compose.rememberNavController
+import com.example.pr5_kachalin.R
 import com.example.pr5_kachalin.data.Specialty
 import com.example.pr5_kachalin.data.SpecialtyRepository
 import com.example.pr5_kachalin.ui.navigation.AppHavHost
@@ -41,12 +43,12 @@ fun DetailScreen(specialtyId: Int, navController: NavController) {
     Scaffold(
         topBar = {
             TopAppBar(
-                title = { Text("Детали специальности") },
+                title = { Text(stringResource(R.string.text6)) },
                 navigationIcon = {
                     IconButton(onClick = { navController.popBackStack() }) {
                         Icon(
                             imageVector = Icons.Default.ArrowBack,
-                            contentDescription = "Назад"
+                            contentDescription = stringResource(R.string.text5)
                         )
                     }
                 }
@@ -73,7 +75,7 @@ fun DetailScreen(specialtyId: Int, navController: NavController) {
                 style = MaterialTheme.typography.bodyMedium
             )
             Button(onClick = { Click(cont) }) {
-                Text(text = "Повзвонить в приемную комиссию")
+                Text(text = stringResource(R.string.text3))
             }
         }
     }
